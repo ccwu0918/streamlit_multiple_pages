@@ -1,6 +1,6 @@
 import streamlit as st
 
-from src import first_page, second_page
+import first_page, second_page
 
 state = st.session_state
 
