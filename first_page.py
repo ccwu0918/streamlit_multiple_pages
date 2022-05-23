@@ -1,3 +1,7 @@
+import streamlit as st
+
+# state = st.session_state
+
 state_name = "first_page_state"
 # initialize the page specific state
 if state_name not in st.session_state:
