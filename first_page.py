@@ -3,41 +3,41 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 
-# state = st.session_state
+def run():
+    # state = st.session_state
 
-state_name = "first_page_state"
-# initialize the page specific state
-if state_name not in st.session_state:
-    st.session_state[state_name] = {}
-# assign it to a variable so you don't have to worry about referencing the right state
-# further in this code
-state = st.session_state[state_name]
+    state_name = "first_page_state"
+    # initialize the page specific state
+    if state_name not in st.session_state:
+        st.session_state[state_name] = {}
+    # assign it to a variable so you don't have to worry about referencing the right state
+    # further in this code
+    state = st.session_state[state_name]
 
-# then reference values with dictionary notation
-state['value'] = "first_page_state"
+    # then reference values with dictionary notation
+    state['value'] = "first_page_state"
 
-# 網頁配置設定(要寫在所有 Streamlit 命令之前，而且只能設定一次)
-st.set_page_config(
-    page_title="自定義Streamlit網頁標題",
-    page_icon="random",
-    layout="centered",
-    initial_sidebar_state="collapsed",
-)
+    # 網頁配置設定(要寫在所有 Streamlit 命令之前，而且只能設定一次)
+    st.set_page_config(
+        page_title="自定義Streamlit網頁標題",
+        page_icon="random",
+        layout="centered",
+        initial_sidebar_state="collapsed",
+    )
+    
+    # 加入標題
+    st.title('我的第一個Streamlit應用程式')
 
 
-# 加入標題
-st.title('我的第一個Streamlit應用程式')
+    # 使用 Magic commands 指令，顯示 Markdown
+    st.write("嘗試創建**表格**：")
 
-
-# 使用 Magic commands 指令，顯示 Markdown
-st.write("嘗試創建**表格**：")
-
-df = pd.DataFrame({
-    'first column': [1, 2, 3, 4],
-    'second column': [10, 20, 30, 40]
-})
-# 單行只有變數，不需要使用 st.write()，它會自動套用
-df
+    df = pd.DataFrame({
+        'first column': [1, 2, 3, 4],
+        'second column': [10, 20, 30, 40]
+    })
+    # 單行只有變數，不需要使用 st.write()，它會自動套用
+    df
 
 
 # 繪製折線圖
