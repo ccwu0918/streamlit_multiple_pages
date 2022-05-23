@@ -4,8 +4,9 @@ import numpy as np
 import pandas as pd
 
 def run():
-    # state = st.session_state
-    state_name = "first_page_state"
+    state = st.session_state
+
+state_name = "first_page_state"
 # initialize the page specific state
 if state_name not in st.session_state:
     st.session_state[state_name] = {}
