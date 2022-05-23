@@ -3,7 +3,8 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 
-# state = st.session_state
+def run():
+    state = st.session_state
 
 state_name = "second_page_state"
 # initialize the page specific state
