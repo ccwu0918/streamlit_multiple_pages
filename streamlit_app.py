@@ -30,6 +30,6 @@ page = st.experimental_get_query_params()["page"][0]
 
 # load the selected page
 if page == first_page_title:
-    run(first_page)
+    first_page.run()
 elif page == second_page_title:
-    run(second_page)
+    second_page.run()
