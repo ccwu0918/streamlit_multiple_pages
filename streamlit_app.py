@@ -47,15 +47,14 @@ if not hasattr(st, 'already_started_server'):
         app.
     ''')
 
-    from flask import Flask
+#    from flask import Flask
 
-    app = Flask(__name__)
-
-    @app.route('/foo')
-    def serve_foo():
-        return 'This page is served via Flask!'
-
-    app.run(port=8888)
+#    app = Flask(__name__)
+#
+#    @app.route('/foo')
+#    def serve_foo():
+#        return 'This page is served via Flask!'
+#    app.run(port=8888)
 
 
 # We'll never reach this part of the code the first time this file executes!
